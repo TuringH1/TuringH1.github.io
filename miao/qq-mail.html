@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>qqmail</title>
+  <style>
+      body{
+          font-size: 12px ;
+          padding: 0;
+          margin: 0;
+      }
+      .topdata{
+  height:66px;
+}
+a{
+    text-decoration: none;
+}
+
+.topbg{
+  height:66px;
+  width:463px;
+  float:right;
+  background-image: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/skin_0/top_bg1e9c5d.jpg);
+}
+.rightlinktext{
+  float:right;
+}
+.search{
+  position: relative;
+  border:1px solid #BBB;
+  background: #FFF;
+  padding: 1px 21px;
+  width:235px;
+  height: 18px;
+  line-height:18px;
+ margin:41px 3px 3px auto;
+  border-radius:2px;
+  box-shadow:0 1px 1px #E6E6E6 inset;
+  white-space: nowrap;
+}
+
+.searchinput{
+    background:transparent;
+    width: auto;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    border: 0 ;
+    outline:none;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.rightlinkphone{
+    height: 30px;
+    width:40px;
+    background-image: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/sendtomobile/icon_sendtomobile_2x1e9c5d.png);
+    background-position:  -248px 0;
+    display: inline-block;
+}
+.searchinput-icon{
+    background-image: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/smartsearch1e9c5d.png);
+    background-position: 0 0;
+    width:24px;
+    height:18px;
+    display: inline-block;
+}
+.searchbutton{
+    border:none;
+    float:right;
+    position: relative;
+    right:-9%;
+    background-color: #fff;
+}
+.logo{
+    float: left;
+    
+    margin:12px 0 0 0;
+    top:0%;
+    position: relative;
+    vertical-align: top;
+}
+.logoimg{
+    top:0;
+    position: relative;
+}
+.switch{
+    display:inline-block;
+    line-height: 18px;
+    height:60px;
+    vertical-align: top;
+}
+.switch-left{
+    margin-top: 1px;
+    display: inline-block;
+}
+.leftpanel{
+    border:3px solid rgb(137,181,233);
+    position: absolute;
+    top:77px;
+    width:179px;
+    left:8px;
+    bottom:0;
+    height: auto;
+}
+.leftpanel-top{
+    border:3px solid rgb(137,181,233);
+    right: 0;
+    z-index:3;
+    display: block;
+}
+.leftpanel-top-ul{
+    list-style: none;
+    width:179px;
+    height: 107px;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    color:rgb(30,84,148);
+    
+}
+.leftpanel-top-ul li:hover{
+    background-color:rgb(224,236,249);
+}
+.leftpanel-bottom ul li:hover{
+    background-color:rgb(224,236,249);
+}
+.leftpanel-bottom ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.leftpanel-bottom ul li{
+    color:#0055ac;
+    height: 22px;
+    line-height: 20px;
+    overflow:hidden;
+    padding: 0 2px 0 13px;
+    margin-bottom:1px;
+    margin-top: 0;
+}
+.maincontainer{
+    border:3px solid rgb(137,181,233);
+    position: absolute;
+    top:77px;
+    left:192px;
+    bottom:0;
+    right: 0;
+    overflow:hidden;
+    z-index:4;
+}
+.todaybody{
+    background: #fff;
+}
+.todaytool{
+    float:right;
+    margin-right: 10px;
+    width: 300px;
+   
+}
+.rightinbox{
+    background-color:rgb(224,236,249);
+}
+.todaymain{
+    margin-right:320px;
+    padding-left: 8px;
+}
+.updateinfo{
+    display:block;
+}
+.updateinfo-left{
+    margin-bottom:0;
+    border: none  ; 
+    min-height: 110px;
+    height: auto;
+    list-style: none;
+}
+.todaywelcome{
+    font-size:16px;
+    font-weight:bold;
+    margin: 0 0 5px;
+}
+.totalmail{
+    font-size:12px;
+    font-weight:normal;
+}
+.mail-icon{
+    background-image: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/mail327a44.png);
+    background-position: -48px -16px;
+    height: 14px;
+    width: 18px;
+    display: inline-block;
+    }
+.mailinfo-left-2{
+    padding: 8px 0 0 23px;
+    overflow: hidden;
+    line-height: hidden;
+    font-size:14px;
+    width: auto;
+    border-bottom:1px solid #fff;
+}
+.mailinfo-left-2 a{
+    color:#1e5494;
+    float:left;
+    margin:0 10px 0 0;
+    white-space:nowrap;
+    font-weight:bold;
+}
+.todaymain2{
+    margin-right: 320px;
+    padding-left: 8px;
+    
+}
+.tipstitle{
+    border-width:0 0 1px 0;
+    padding-top: 5px;
+    height: 23px;
+    border: 1px solid #a7c5e2;
+    background-color: #dff5fb;
+}
+.tipbook-top{
+    position: relative;
+    padding: 0 2px 2px 2px;
+    margin: 0 0 6px;
+    height: 83px;
+    overflow: hidden;
+    border-width: 0 0 1px 0;
+    border: 1px solid #a7c5e2;
+    background-image: url(https://rescdn.qqmail.com/zh_CN/todaybar/20181009qywx_1x.png);
+}
+.today-linkpanel{
+    list-style: none;
+    display: block;
+    padding-left:40px ;
+    border:1px solid rgb(167,197,226);
+}
+.today-linkpanel div{
+    display: block;
+}
+.today-linkpanel a{
+    line-height: 24px;
+    font-size: 14px;
+}
+.today-linkitem-left{
+    float:left;
+    padding: 3px 0;
+    margin: 0;
+    width:44%;
+}
+.today-linkitem-right{
+    float:left;
+    width:55%;
+    padding: 3px 0;
+}
+.today-linkicon{
+    background-image: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/today/newicon_today_blue1e9c5d.png);
+    width: 20px;
+    height: 24px;
+    display: inline-block;
+}
+.today-linkicon-1{
+    background-position: 0 0;
+}
+.today-linkicon-2{
+    background-position: 0 -30px;
+}
+.today-linkicon-3{
+    background-position: 0 -60px;
+}
+.today-linkicon-4{
+    background-position: 0 -90px;
+}
+.today-linkicon-5{
+    background-position: 0 -120px;
+}
+.today-linkicon-6{
+    background-position: 0 -155px;
+}
+.mainbottom{
+    display:block;
+    margin: 15px 0 0 10px;
+    float: left;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class=topdata>
+  <div class="topbg">
+    <div class="rightlink">
+      <span class=rightlinktext>
+        <span class="rightlinkphone"></span>
+        <span>|</span>
+        <a href="">反馈建议</a>
+         <span>|</span>
+        <a href="">帮助中心</a>
+         <span>|</span>
+        <a href="">退出</a>            
+      </span>
+    </div>
+    <div class="search">
+      <span class="searchinput-icon"></span>
+        <input type="text" class="searchinput" value="邮件搜索...">
+        <button class="searchbutton">&crarr;</button>
+    </div>
+  </div>
+ <div class="logo">
+   <a href="" class="imglogo">
+       <img src="https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/logo/logo_0_01f1927.png" alt="">
+   </a>
+   <div class="switch">
+       <div class="switch-left">
+<b>大喵</b>
+<span>&lt;
+    <a href="">123456789@qq.com</a>
+    &gt;
+</span>
+<br>
+<a href="">邮箱首页</a>
+<span>|</span>
+<a href="">设置</a>
+<span>-</span>
+<a href="">换肤</a>
+       </div>
+   </div>
+ </div> 
+</div>
+<div class="topline">
+    <div class="topline-left"></div>
+</div>
+  <div class="leftpanel">
+      <div class="leftpanel-top">
+          <ul class="leftpanel-top-ul">
+              <li> <a href="">写信</a>
+                  
+               
+            </li>  
+              <li><a href="">首先</a>
+                </li>
+              <li> <a href="">通讯录</a>
+               </li>
+          </ul>
+      </div>
+      <div class="leftpanel-bottom">
+          <ul>
+              <li><a href="">收件箱</a></li>
+              <li><a href="">星标邮件</a></li>
+              <li><a href="">群邮件</a></li>
+              <li><a href="">草稿箱</a></li>
+              <li><a href="">已发送</a></li>
+              <li><a href="">已删除</a></li>
+              <li><a href="">垃圾箱</a></li>
+              <li><a href="">QQ邮件订阅</a></li>
+              <hr>
+              <li><a href="">其他邮箱</a></li>
+              <hr>
+              <li><a href="">漂流瓶</a></li>
+              <li><a href="">日历</a> | <a href="">记事本</a></li>
+              <li><a href="">在线文档</a></li>
+              <li><a href="">附件收藏</a></li>
+              <li><a href="">文件中转站</a></li>
+              <li><a href="">简历</a></li>
+              <li><a href="">贺卡</a> | <a href="">明信片</a></li>
+              <li><a href="">阅读空间</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="maincontainer">
+      <div class="todaybody">
+          <div class="todaytool">
+              <div style>
+                  <div style="margin:6px 6px 0 0;height:40px"></div>
+              </div>
+              <div class="rightinbox">
+                  <b style="display:block;height:20px;line-height:20px;font-size:14px;">推荐使用QQ邮箱英文账号
+                </b>
+                <span style="display:block;height:20px;line-height:20px;">QQ邮箱英文账号，不仅保护QQ号码安全，更适合</span>
+                
+                <span style="display:block;height:20px;line-height:20px;">用于发送正式邮件。<a href="" style="text-decoration:underline">点击前往设置</a></span>
+              </div>
+          </div>
+          <div class="todaymain">
+              <div class="updatainfo">
+                  <ul class="updateinfo-left">
+                      <li class="todaywelcome">
+                          <div>
+                              上午好，<a href="">大喵</a>
+                          </div>
+                      </li>
+                      <li class="totalmail">
+                          <div class="mail-icon"></div> 邮件：0封未读邮件</li>
+                      <li class="mailinfo-left-2">
+                          <a href="">进入收件箱</a>
+                          <a href="">漂流瓶</a>
+                          <a href="">订阅中心</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+
+      </div>
+      <div class="todaymain2">
+          <div class="tipstitle">
+              <a href="">邮箱推荐</a>
+          </div>
+          <div class="tipbook-top">
+             
+          </div>
+         
+        <div>
+          <ul class="today-linkpanel">
+              <li class="today-linkitem-left">
+                  <span class="today-linkicon today-linkicon-1"></span>
+                  <a href="">iPhone版</a>
+              </li>
+              <li class="today-linkitem-right">
+                    <span class="today-linkicon today-linkicon-2"></span>
+                    <a href="">明信片-贺卡</a>
+              </li>
+              <li class="today-linkitem-left">
+                    <span class="today-linkicon today-linkicon-3"></span>
+                    <a href="">iPad版</a>
+              </li>
+              <li class="today-linkitem-right"><span class="today-linkicon today-linkicon-4"></span>
+                <a href="">记事本-日历</a></li>
+              <li class="today-linkitem-left">
+                    <span class="today-linkicon today-linkicon-5"></span>
+                    <a href="">Andriod版</a>
+              </li>
+              <li class="today-linkitem-right">
+                    <span class="today-linkicon today-linkicon-6"></span>
+                    <a href="">文件中转站</a>
+              </li>
+          </ul>
+        </div>
+      
+        <div class="mainbottom">
+          <a href="">2017年8月31日更新</a>
+          <span>
+            <span> | </span>
+            <a href="">暖灯行动</a>
+            <span> | </span>
+            <a href="">企业邮箱</a>
+            <span> | </span>
+            <a href="">开放平台</a>
+            <span> | </span>
+            <a href="">体验室</a>
+            <span> | </span>
+            <a href="">邮箱助手</a>
+            <span> | </span>
+            <a href="">自助查询</a>
+            <span> | </span>
+            <a href="">隐私政策</a>
+            <br>
+            标准版 -
+            <a href="">基本版</a>
+            <span> | </span>
+            © 1998 - 2019 Tencent Inc. All Rights Reserved
+
+          </span>
+      </div>
+    
+    </div>
+      
+      
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>css-menu</title>
+<style id="jsbin-css">
+* {
+  font-size: 24px;
+  
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  position: absolute;
+}
+
+ul.menu > li {
+  float: left;
+  padding: 0px 20px;
+}
+
+ul.menu > li > ul {
+  top: 100%;
+  left: 0;
+}
+
+ul.menu > li > ul::before {
+  content: none;
+}
+
+ul li {
+  position: relative;
+  padding-right: 40px;
+  white-space: nowrap;
+  background-color:black;
+  color:white;
+}
+li:hover {
+  background-color: orange;
+}
+li:hover > ul > li {
+  opacity: 1;
+  pointer-events: auto;
+}
+ul ul::before {
+  content: '>';
+  position: absolute;
+  left: -1em;
+}
+ul ul li {
+  opacity:0;
+  transition: opacity .6s;
+}
+ul ul {
+ 
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 100%;
+}
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  <ul>
+    <li>手机 电话卡
+      <ul>
+        <li>手机
+            <ul>
+                <li>小米9</li>
+                <li>小米8</li>
+                <li>Redmi 7</li>
+            </ul>
+        </li>
+        <li>电话卡
+            <ul>
+                <li>米粉卡</li>
+                <li>日租卡</li>
+                <li>移动卡</li>
+            </ul>
+        </li>
+      </ul>
+    </li>
+    <li>电视 盒子</li>
+    <li>笔记本 平板</li>
+    <li>家电 插线板</li>
+  </ul>
+</body>
+</html>

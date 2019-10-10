@@ -1,0 +1,59 @@
+
+body >p:first-of-type{color:red;}
+
+
+p.a:hover{color:red;}
+p.a:active{color:green;}
+p.a:focus{color:blue;}
+
+
+p.a.c span{color:red;}
+p.a.c span span:first-child{color:green;}
+p.a.c span span:nth-child(2){color:blue;}
+
+
+a:link{color:pink}
+a:visited{color:orange}
+a[href^="mailto" i]{color:blue}
+[href^="tel:"] {color:yellow}
+[href$=".pdf"]{ font-size:30px}
+[href$=".PDF"]{ font-size:30px}
+
+
+.a ul li:nth-child(n + 4):nth-child(-n + 7) {
+    color: red;
+}
+
+.b ul li:nth-child(n):nth-child(-n+25){
+    color:red
+  }
+  
+  .b ul li:nth-child(n+65){
+    color:green
+  }
+  
+  .b ul li:nth-child(n+35):nth-child(-n+50){
+    color:blue
+  }
+  
+
+  .prime ul li:nth-child(2n+4){
+    color:red;
+  }
+  
+  .prime ul li:nth-child(3n+6){
+    color:red;
+  }
+  
+  .prime ul li:nth-child(5n+10){
+    color:red;
+  }
+  
+  
+  .prime ul li:nth-child(7n+14){
+    color:red;
+  }
+  
+
+
+  

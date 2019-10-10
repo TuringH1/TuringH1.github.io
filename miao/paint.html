@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+  var str_line = function(x1, x2 , y, str, emp){
+    for (let x = x1; x < x2; x++) {
+      let temp = x - x1
+      let round = str + emp
+      if (temp % round < str) {
+        dot(x , y ,color = 'black')
+      }
+    }
+  }
+  str_line(100,300,20,1,0)
+  str_line(100,300,30,1,1)
+  str_line(100,300,40,2,2)
+  str_line(100,300,50,3,2)
+
+  var line_deg45 = function(){
+    for (let i = 0; i < 300; i++) {
+      if (i % 2 == 0) {
+        dot(i,i)
+      }
+    }
+  }
+  line_deg45()
+
+  var line_lt2rb = function(){
+    for (let i = 0; i < 400; i++) {
+      if (i % 2 == 0) {
+        dot(i ,3 * i / 4)
+      }
+    }
+  }
+  line_lt2rb()
+
+  var str_line_2 = function(x, y1 , y2, str, emp){
+    for (let y = y1; y < y2; y++) {
+      let temp = y - y1
+      let round = str + emp
+      if (temp % round < str) {
+        dot(x , y ,color = 'black')
+      }
+    }
+  }
+  /*空心矩形*/
+  str_line(150,200,150,1,0)
+  str_line(150,200,200,1,0)
+  str_line_2(150,150,200,1,0)
+  str_line_2(200,150,200,1,0)
+
+  /*色彩空间*/
+  var color_cube = function(){
+  for (var x = 0; x < 64; x ++) {
+    for (var y = 0; y < 64; y ++) {
+      var color = 'rgb(' + x * 4 + ',' + y * 4 + ',255)'
+      dot(x,y,color)
+    }
+  }
+  }
+  color_cube()
+
+  var cube = function(){
+    ctx.fillStyle = 'yellow';
+    ctx.fillRect(200, 200, 100, 100); 
+  }
+  cube()
+
+  /*空心圆*/
+  var empty_round = function(){
+    for (let i = 20; i < 60; i += 0.5) {
+      for (let j = 150; j < 190; j += 0.5) {
+        let a = i - 40
+        let b = j - 170
+        let l = Math.round(Math.sqrt(a * a + b * b))
+        if (l == 20) {
+          dot(i,j)
+        }
+      }
+    }
+  }
+  empty_round()
+
+  var round = function(){
+    for (let i = 20; i < 60; i += 0.5) {
+      for (let j = 200; j < 240; j += 0.5) {
+        let a = i - 40
+        let b = j - 220
+        let l = Math.round(Math.sqrt(a * a + b * b))
+        if (l <= 20) {
+          dot(i,j)
+        }
+      }
+    }
+  }
+  round()
+
+  var round2 = function(){
+    for (var d = 0; d < 2 * Math.PI; d+= 0.02) {
+      var x = Math.sin(d) * 50
+      var y = Math.cos(d) * 50
+      dot(x + 200 , y + 150)
+    }
+  }
+
+  var sinx = function(y1){
+    var k = 10
+    var a = 1/10
+    for (let i = 0; i < 400; i++) {
+      let x = i
+      let y = y1 + k * Math.sin(a * x)
+      dot(x,y)
+    }
+  }
+  sinx(120)
+
+</script>
+</html>
